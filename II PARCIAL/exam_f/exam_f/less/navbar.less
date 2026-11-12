@@ -1,0 +1,127 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: @shadow;
+
+    .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: @primary-color;
+        }
+    }
+
+    .navbar-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+
+        a {
+            color: @text-light;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: @primary-color;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: @primary-color;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.btn-reservar {
+    background: @secondary-color;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    .transicion();
+
+    &:hover {
+        background: #e74c3c;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    }
+}
+
+@media (max-width: 968px) {
+    .navbar {
+        padding: 0.8rem 0;
+
+        .navbar-menu {
+            gap: 1.2rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    .btn-reservar {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        .navbar-container {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .navbar-brand .logo {
+            font-size: 1.5rem;
+        }
+
+        .navbar-menu {
+            display: none;
+        }
+    }
+
+    .btn-reservar {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .navbar-brand .logo {
+        font-size: 1.3rem;
+    }
+
+    .btn-reservar {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

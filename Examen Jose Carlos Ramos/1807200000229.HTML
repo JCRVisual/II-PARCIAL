@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA para la Inclusión Financiera</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+                font-family: Arial, sans-serif;
+                color: #263238;
+        }
+
+        .portada {
+                background-color: #eef5f1;
+                padding: 90px 0;
+        }
+
+        .portada h1 {
+                color: #174c43;
+                font-size: 42px;
+                font-weight: bold;
+                margin-bottom: 20px;
+        }      
+
+        .portada p {
+                font-size: 18px;
+                line-height: 1.7;
+                margin-bottom: 25px;
+        }
+
+        .portada img {
+                width: 100%;
+        }
+
+        @media (max-width: 768px) {
+        .portada{
+                padding: 50px 0;
+            }
+        .portada h1 {
+            font-size: 32px;
+            }
+        }
+
+        .card {
+                border: none;
+                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+                transition: transform 0.2s;
+        }
+
+        .card:hover {
+                transform: translateY(-5px);
+        }
+
+        .card img {
+                height: 200px;
+                object-fit: cover;
+        }
+
+        .card-title {
+                color: #174c43;
+                font-weight: bold;
+        }
+
+        .beneficios {
+                background-color: #eef5f1;
+        }
+
+        .beneficios p {
+                max-width: 750px;
+                margin: 20px auto 0;
+                line-height: 1.7;
+        }
+
+
+        .valores {
+                background-color: #eef5f1;
+        }
+
+        .valores h4 {
+                color: #174c43;
+                font-weight: bold;
+        }   
+
+        .contacto {
+                background-color: #eef5f1;
+        }
+
+        footer a {
+                text-decoration: none;
+        }
+
+        footer a:hover {
+                text-decoration: underline;
+        }
+</style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FinTech Norte</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Acerca de nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="inicio" class="portada">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Inteligencia artificial para impulsar tus ideas</h1>
+                    <p>
+                        Acercamos los servicios financieros a los emprendedores
+                        hondureños mediante agentes de inteligencia artificial.
+                    </p>
+                    <a href="#servicios" class="btn btn-success btn-lg">Conocer Servicios</a>
+                </div>
+
+                <div class="col-lg-5 mt-4 mt-lg-0">
+                    <img src="https://placehold.co/600x400/174c43/ffffff?text=FinTech+Norte"
+                         class="img-fluid rounded" alt="Tecnología financiera">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Nuestros servicios</h2>
+                <p>Herramientas financieras pensadas para tu negocio.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://placehold.co/600x350/174c43/ffffff?text=Acceso+a+creditos"
+                             class="card-img-top" alt="Acceso a créditos">
+                        <div class="card-body">
+                            <h5 class="card-title">Acceso a créditos</h5>
+                            <p class="card-text">
+                                Facilitamos la orientación financiera para que
+                                los emprendedores conozcan opciones de crédito
+                                adecuadas para sus negocios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://placehold.co/600x350/3b765b/ffffff?text=Gestion+de+ahorros"
+                             class="card-img-top" alt="Gestión de ahorros">
+                        <div class="card-body">
+                            <h5 class="card-title">Gestión de ahorros</h5>
+                            <p class="card-text">
+                                Ofrecemos herramientas para organizar ingresos,
+                                controlar gastos y planificar las metas
+                                económicas de cada emprendimiento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://placehold.co/600x350/263b55/ffffff?text=Asistente+con+IA"
+                             class="card-img-top" alt="Asistente financiero">
+                        <div class="card-body">
+                            <h5 class="card-title">Asistente con IA</h5>
+                            <p class="card-text">
+                                Un asistente de lenguaje natural que ayuda a
+                                resolver dudas financieras de forma sencilla
+                                y accesible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section class="beneficios py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Eficiencia y transparencia</h2>
+                <p>
+                    Utilizamos agentes inteligentes para facilitar los servicios
+                    financieros y apoyar a los emprendedores de Honduras.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded h-100">
+                        <h5>Arquitectura multiagente</h5>
+                        <p>
+                            Diferentes agentes de inteligencia artificial
+                            colaboran para analizar consultas y organizar
+                            las tareas financieras.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded h-100">
+                        <h5>Seguridad financiera</h5>
+                        <p>
+                            La protección de los datos y la verificación
+                            de las operaciones son fundamentales para
+                            generar confianza.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded h-100">
+                        <h5>Atención rápida</h5>
+                        <p>
+                            Buscamos ofrecer respuestas ágiles y accesibles,
+                            incluso para emprendedores de comunidades rurales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="nosotros" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Acerca de nosotros</h2>
+                    <p>
+                        Somos una startup tecnofinanciera que busca acercar
+                        los servicios financieros a las comunidades rurales
+                        de Honduras y del Triángulo Norte.
+                    </p>
+                    <p>
+                        Utilizamos inteligencia artificial para ofrecer
+                        orientación financiera sencilla, apoyar a los
+                        pequeños negocios y facilitar su crecimiento.
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="p-4 rounded valores">
+                        <h4>Nuestro compromiso</h4>
+                        <p>
+                            Trabajamos por una inclusión financiera más
+                            accesible, segura y transparente para todos.
+                        </p>
+                        <ul>
+                            <li>Atención sencilla y accesible.</li>
+                            <li>Protección de la información.</li>
+                            <li>Apoyo a los emprendedores locales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto py-5">
+        <div class="container text-center">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes un emprendimiento? Nos gustaría conocer tu proyecto.</p>
+            <p><strong>Correo:</strong> contacto@fintechnorte.com</p>
+            <p><strong>Ubicación:</strong> Honduras, Centroamérica</p>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-2">FinTech Norte - Inclusión financiera con IA</p>
+            <a href="#inicio" class="text-white me-3">Inicio</a>
+            <a href="#servicios" class="text-white me-3">Servicios</a>
+            <a href="#contacto" class="text-white">Contacto</a>
+
+            <div class="mt-3">
+                <a href="https://www.facebook.com/" class="text-white me-3">Facebook</a>
+                <a href="https://www.instagram.com/" class="text-white">Instagram</a>
+            </div>
+
+            <p class="mt-3 mb-0">
+                &copy; 2026 FinTech Norte. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

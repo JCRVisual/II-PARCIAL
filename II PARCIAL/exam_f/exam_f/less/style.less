@@ -1,0 +1,76 @@
+/* implementar código less, un archivo por cada componente o bases */
+/* Base Styles and Reset */
+@primary-color: #00a8cc;
+@primary-dark: #007a99;
+@secondary-color: #ff6b6b;
+@accent-color: #ffd93d;
+@text-dark: #2c3e50;
+@text-light: #ecf0f1;
+@bg-light: #f8f9fa;
+@bg-dark: #1a1a2e;
+@shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+@shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+.transicion() {
+    transition: all 0.3s ease;
+}
+
+.sombra() {
+    box-shadow: @shadow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: @text-dark;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: @text-dark;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    .transicion();
+    text-decoration: none;
+    display: inline-block;
+}
+
+@import "navbar.less";
+@import "hero.less";
+@import "pricing.less";
+@import "contact.less";
+@import "footer.less";

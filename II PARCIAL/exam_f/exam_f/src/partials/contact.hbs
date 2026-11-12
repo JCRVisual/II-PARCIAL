@@ -1,0 +1,71 @@
+<section id="contacto" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">{{tituloContacto}}</h2>
+        <p class="section-subtitle">{{subtituloContacto}}</p>
+
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3 class="contact-info-title">{{tituloInformacion}}</h3>
+
+                {{#each informacionContacto}}
+                    <div class="info-item">
+                        <div class="info-icon">{{icono}}</div>
+                        <div class="info-content">
+                            <h4>{{titulo}}</h4>
+                            {{#each detalles}}
+                                <p>{{this}}</p>
+                            {{/each}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="+504 0000-0000">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto">
+                        {{#each asuntos}}
+                            <option value="{{valor}}">{{nombre}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha-llegada">Fecha de Llegada</label>
+                        <input type="date" id="fecha-llegada" name="fecha-llegada">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha-salida">Fecha de Salida</label>
+                        <input type="date" id="fecha-salida" name="fecha-salida">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">{{botonEnviar}}</button>
+            </form>
+        </div>
+    </div>
+</section>

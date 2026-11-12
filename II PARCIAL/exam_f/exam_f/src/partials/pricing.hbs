@@ -1,0 +1,34 @@
+<section id="precios" class="pricing">
+    <div class="container">
+        <h2 class="section-title">{{tituloPrecios}}</h2>
+        <p class="section-subtitle">{{subtituloPrecios}}</p>
+
+        <div class="pricing-grid">
+            {{#each planes}}
+                <div class="pricing-card {{clase}}">
+                    {{#if destacado}}
+                        <div class="badge">{{etiqueta}}</div>
+                    {{/if}}
+
+                    <div class="pricing-header">
+                        <h3 class="plan-name">{{nombre}}</h3>
+
+                        <div class="price">
+                            <span class="currency">{{moneda}}</span>
+                            <span class="amount">{{precio}}</span>
+                            <span class="period">{{periodo}}</span>
+                        </div>
+                    </div>
+
+                    <ul class="features-list">
+                        {{#each caracteristicas}}
+                            <li class="feature">✓ {{this}}</li>
+                        {{/each}}
+                    </ul>
+
+                    <button class="btn-plan">{{boton}}</button>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</section>

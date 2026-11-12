@@ -1,0 +1,210 @@
+.pricing {
+    padding: 100px 0;
+    background: @bg-light;
+
+    .pricing-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .pricing-card {
+        flex: 1 1 300px;
+        max-width: 380px;
+        background: white;
+        border-radius: 15px;
+        padding: 2.5rem;
+        box-shadow: @shadow;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: @primary-color;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: @shadow-lg;
+        }
+
+        &.featured {
+            border: 2px solid @primary-color;
+            transform: scale(1.05);
+
+            &::before {
+                height: 8px;
+            }
+
+            .btn-plan {
+                background: @secondary-color;
+
+                &:hover {
+                    background: #e74c3c;
+                    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+                }
+            }
+        }
+    }
+
+    .badge {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        background: @secondary-color;
+        color: white;
+        padding: 5px 40px;
+        transform: rotate(45deg);
+        font-size: 0.85rem;
+        font-weight: 600;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .pricing-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid @bg-light;
+    }
+
+    .plan-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: @text-dark;
+        margin-bottom: 1rem;
+    }
+
+    .price {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .currency {
+        font-size: 1.5rem;
+        color: @primary-color;
+        font-weight: 600;
+    }
+
+    .amount {
+        font-size: 3rem;
+        font-weight: 800;
+        color: @text-dark;
+    }
+
+    .period {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .features-list {
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+
+    .feature {
+        padding: 0.8rem 0;
+        color: @text-dark;
+        font-size: 0.95rem;
+        border-bottom: 1px solid @bg-light;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .btn-plan {
+        width: 100%;
+        padding: 14px;
+        background: @primary-color;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        .transicion();
+
+        &:hover {
+            background: @primary-dark;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 168, 204, 0.3);
+        }
+    }
+}
+
+@media (max-width: 968px) {
+    .pricing {
+        padding: 70px 0;
+
+        .pricing-grid {
+            gap: 1.5rem;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.02);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing {
+        padding: 50px 0;
+
+        .pricing-grid {
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding: 2rem;
+
+            &.featured {
+                transform: scale(1);
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            padding: 4px 35px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing {
+        .pricing-card {
+            padding: 1.5rem;
+        }
+
+        .plan-name {
+            font-size: 1.3rem;
+        }
+
+        .amount {
+            font-size: 2.5rem;
+        }
+
+        .feature {
+            font-size: 0.9rem;
+            padding: 0.7rem 0;
+        }
+    }
+}

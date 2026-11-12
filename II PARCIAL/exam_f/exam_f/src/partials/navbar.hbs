@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-brand">
+            <h1 class="logo">{{nombreHotel}}</h1>
+        </div>
+
+        <ul class="navbar-menu">
+            {{#each menu}}
+                <li><a href="{{enlace}}">{{nombre}}</a></li>
+            {{/each}}
+        </ul>
+
+        <button class="btn-reservar">{{textoReserva}}</button>
+    </div>
+</nav>
