@@ -1,0 +1,70 @@
+@color-principal: #6c5ce7;
+@color-fondo: #f5f3ff;
+@color-texto: #292344;
+@color-borde: #e8e3ff;
+
+header {
+    background: linear-gradient(135deg, @color-principal, #9b59b6);
+}
+
+.introduccion {
+    h2 {
+        color: @color-texto;
+    }
+
+    p {
+        color: #77718f;
+    }
+}
+
+#contenedor-testimonios {
+    .tarjeta {
+        background-color: white;
+        border: 1px solid @color-borde;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(108, 92, 231, 0.10);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .estrellas {
+            color: #f1c40f;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .comentario {
+            color: #625d79;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .persona {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .foto {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .nombre {
+                color: @color-texto;
+                font-weight: bold;
+            }
+
+            .ocupacion {
+                color: #8b85a3;
+                font-size: 13px;
+                margin-top: 5px;
+            }
+        }
+    }
+}

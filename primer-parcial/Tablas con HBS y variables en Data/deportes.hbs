@@ -1,0 +1,22 @@
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre del Deporte</th>
+            <th>Descripción del Deporte</th>
+            <th>Qué se requiere para practicarlo</th>
+            <th>Ranking</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each deportes}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>{{descripcion}}</td>
+            <td>{{requiere}}</td>
+            <td>{{ranking}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

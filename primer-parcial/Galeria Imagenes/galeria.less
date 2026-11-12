@@ -1,0 +1,48 @@
+@color-principal: #6c5ce7;
+@color-fondo: #f5f3ff;
+@color-texto: #292344;
+@color-borde: #e8e3ff;
+
+header {
+    background: linear-gradient(135deg, @color-principal, #9b59b6);
+}
+
+.introduccion {
+    h2 {
+        color: @color-texto;
+    }
+
+    p {
+        color: #77718f;
+    }
+}
+
+#contenedor-galeria {
+    .imagen {
+        background-color: white;
+        border: 1px solid @color-borde;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(108, 92, 231, 0.10);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .titulo-imagen {
+            color: @color-texto;
+            text-align: center;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}

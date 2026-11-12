@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet/less" href="galeria.less">
+
+    <script src="https://cdn.jsdelivr.net/npm/less@4.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.8/dist/handlebars.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Galería Creativa</h1>
+        <p>Una colección de lugares y momentos especiales</p>
+    </header>
+
+    <main>
+        <section class="introduccion">
+            <h2>Explora nuestra galería</h2>
+            <p>Disfruta de estas imágenes de naturaleza y paisajes.</p>
+        </section>
+
+        <section id="galeria">
+            <div id="contenedor-galeria"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Galería Creativa</p>
+    </footer>
+
+    <script src="data/imagenes.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>

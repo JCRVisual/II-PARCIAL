@@ -1,0 +1,25 @@
+{{#each testimonios}}
+    <div class="tarjeta">
+
+        <div class="estrellas">
+            {{#estrellas calificacion}}
+            {{/estrellas}}
+        </div>
+
+        <p class="comentario">
+            "{{comentario}}"
+        </p>
+
+        <div class="persona">
+
+            <img src="{{foto}}" alt="Foto de {{nombre}}" class="foto">
+
+            <div>
+                <p class="nombre">{{nombre}}</p>
+                <p class="ocupacion">{{ocupacion}}</p>
+            </div>
+
+        </div>
+
+    </div>
+{{/each}}

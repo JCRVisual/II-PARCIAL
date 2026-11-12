@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla de Deportes</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2196F3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ranking de Deportes</h1>
+
+    <div id="tabla"></div>
+
+    <script src="variables.js"></script>
+
+    <script>
+        fetch("deportes.hbs")
+            .then(response => response.text())
+            .then(template => {
+                const parcial = Handlebars.compile(template);
+                document.getElementById("tabla").innerHTML =
+                    parcial(deportes);
+            });
+    </script>
+
+</body>
+</html>
